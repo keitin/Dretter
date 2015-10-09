@@ -1,0 +1,42 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.edit-group-field {
+  input {
+    margin-bottom: 15px;
+  }
+}
+
+
+
+.edit-group-box {
+  li {
+    float: right;
+    height: 50px;
+    width: 120px;
+    background-color: rgb(248, 250, 252);
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    color: gray;
+    padding: 11px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+    list-style: none;
+    margin-left: 10px;
+  }
+
+  .save-button {
+    background-color: #55acee;
+    input {
+      background-color: rgba(0,0,0,0);
+      border: none;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+  }
+}

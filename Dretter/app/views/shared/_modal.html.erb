@@ -1,0 +1,31 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_for(@group, remote: true) do |f| %>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">グループ作成</h4>
+      </div>
+      <div class="modal-body">
+        <div class="field">
+          <div class="edit-group-field">
+            <%= f.text_field :name, class: "form-control", placeholder: "グループ名" %>
+            <%= f.text_field :image_url, class: "form-control", placeholder: "画像のURLを貼ってね" %>
+          </div>
+        </div>
+      </div>
+        <div class="modal-footer">
+          <div class="edit-group-box">
+            <li class="save-button">
+              <%= f.submit '保存' %>
+            </li>
+            <li>
+             <%= link_to 'キャンセル', "" %>
+            </li>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
