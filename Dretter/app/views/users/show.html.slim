@@ -1,0 +1,25 @@
+.profile-cover-image style="background: url(#{current_user.header_image}) center center no-repeat; background-size: cover;"
+
+.profile-list
+  .profile-list-container
+    .edit-profile-button
+      = link_to 'プロフィールを編集', edit_user_path(current_user)
+
+    .profile-icon style="background: url(#{current_user.icon_image}) center center no-repeat; background-size: cover;"
+
+
+.profile-list-container
+  .current-user-box
+    .name
+      = current_user.name
+    .text
+      = current_user.profile
+    .image-text
+      | 画像
+    .images
+      - @tweets.limit(6).each do |tweet|
+        .image style="background: url(#{tweet.image_url}) center center no-repeat; background-size: cover;"
+  .current-user-time-line
+    .timeline-tweet-box
+      .all_tweets
+        = render @tweets

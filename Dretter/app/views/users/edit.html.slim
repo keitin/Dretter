@@ -1,0 +1,63 @@
+= form_for current_user do |f|
+
+  .modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close type="button" data-dismiss="modal" aria-label="Close"
+            span.aria-hidden="true"
+          h4.modal-title
+            | Modal title
+        .modal-body
+          p
+          | One fine body
+        .modal-footer
+          button.btn.btn-default type="button" data-dismiss="modal"
+            |Close
+
+
+  .profile-cover-image style="background: url(#{current_user.header_image}) center center no-repeat; background-size: cover;"
+    .profile-cover-image-mask
+      .fa.fa-camera.camera-icno
+        .edit-header-text
+          .dropdown
+            a.dropdown-toggle.edit-icon-image-button type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+              | ヘッダー画像を編集する
+
+            ul.dropdown-menu.icon-image-box aria-labelledby="dropdownMenu1"
+              li
+                = f.text_field :header_image, autofocus: true, class: "form-control", placeholder: "ヘッダー画像"
+
+  .profile-list
+    .profile-list-container
+      .save-profile-button
+        li.save-button
+          = f.submit '保存'
+        li
+          = link_to 'キャンセル', user_path(current_user)
+
+      .profile-icon style="background: url(#{current_user.icon_image}) center center no-repeat; background-size: cover;"
+        .profile-icon-mask
+          .fa.fa-camera.camera-icno
+            .edit-header-text
+              .dropdown
+                a.dropdown-toggle.edit-icon-image-button type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                  | プロフィール画像を変更
+
+                ul.dropdown-menu.icon-image-box aria-labelledby="dropdownMenu1"
+                  li
+                    = f.text_field :icon_image, autofocus: true, class: "form-control", placeholder: "プロフィール画像"
+
+
+  .profile-list-container
+    .current-user-box.edit-box
+      .name.edit-field.edit-name
+        = f.text_field :name, autofocus: true, class: "form-control", placeholder: "名前"
+      .text.edit-field
+        = f.text_area :profile, class: "form-control", placeholder: "プロフィール文", rows: 4
+
+    .current-user-time-line
+      .timeline-tweet-box
+        .time-line-mask
+          .all_tweets
+            = render @tweets

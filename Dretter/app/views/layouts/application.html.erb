@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dretter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="header-logo">
+      <%= link_to "Dretter", root_path, class: "logo_link" %>
+      <% if user_signed_in? %>
+        <div class="dropdown header-setting">
+          <button class="setting-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            設定
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><%= link_to "プロフィール", user_path(current_user) %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, :method => :delete %></li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</header>
+  <%= yield %>
+</body>
+</html>

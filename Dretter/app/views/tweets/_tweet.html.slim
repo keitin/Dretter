@@ -1,0 +1,11 @@
+.tweet-container.clearfix
+  .tweet-wrapper
+    .icon-image style="background: url(#{tweet.user.icon_image}) center center no-repeat; background-size: cover;"
+    .tweet-right
+      .tweet-name
+        = tweet.user.name
+      .tweet-text
+        = tweet.text
+        / = tweet.text
+      - if tweet.image_url.present?
+        .tweet-image style="background: url(#{tweet.image_url}) center center no-repeat; background-size: cover;"

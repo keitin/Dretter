@@ -1,0 +1,300 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//log in
+
+.login-background {
+  height: 100%;
+  background: url("https://s.yimg.com/uy/build/images/sohp/inspiration/solar-storm3.jpg") center center no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+
+  .login-poem {
+    width: 450px;
+    height: 300px;
+    float: left;
+  }
+
+  p.welcome {
+    color: white;
+    font-size: 35px;
+    font-family: "遊ゴシック", helvetica;
+
+    span {
+      font-size: 45px;
+      letter-spacing: 3px;
+    }
+  }
+  p.welcom-poem {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 15px;
+  }
+
+  .login-large-box {
+    width: 400px;
+    float: left;
+    margin-left: 50px;
+
+    .login-box {
+      padding: 15px;
+      border-radius: 5px;
+      height: 135px;
+      background-color: white;
+    }
+
+    .email-field {
+      margin-bottom: 15px;
+    }
+
+    .password-field {
+      width: 245px;
+      float: left;
+    }
+
+    .checkbox-term {
+      color: gray;
+      float: left;
+      margin-top: 5px;
+      margin-left: 5px;
+      font-size: 13px;
+      padding-top: 2px;
+    }
+
+    .login-button {
+      width: 111px;
+      height: 35px;
+      padding: 7px;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      background-color: #0084B4;
+      float: right;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
+  .signin-box {
+    // height: 200px;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 15px;
+
+    .sign-poem {
+      color: gray;
+      font-size: 17px;
+      padding-bottom: 15px;
+      padding-top: 5px;
+      border-bottom: 1px solid #d3d3d3;
+    }
+
+    .sign-field {
+      margin-top: 7px;
+    }
+
+    .signin-button {
+      width: 150px;
+      margin-top: 15px;
+      background-color: #F69D00;
+    }
+  }
+}
+
+//show profile
+
+.profile-cover-image {
+  height: 400px;
+}
+
+
+.profile-list-container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.profile-list {
+  height: 80px;
+  background-color: white;
+  border-bottom: 1px solid #d3d3d3;
+
+  .edit-profile-button {
+    float: right;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(248, 250, 252);
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    color: gray;
+    padding: 11px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+
+  .save-profile-button {
+    li {
+      float: right;
+      height: 50px;
+      width: 120px;
+      background-color: rgb(248, 250, 252);
+      border: 1px solid #e1e8ed;
+      border-radius: 5px;
+      color: gray;
+      padding: 11px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 8px;
+      list-style: none;
+      margin-left: 10px;
+    }
+
+    .save-button {
+      background-color: #55acee;
+      input {
+        background-color: rgba(0,0,0,0);
+        border: none;
+        color: white;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.profile-icon {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  border: 5px solid white;
+  position: relative;
+  top: -130px;
+  z-index: 2;
+
+  .profile-icon-mask {
+    width: 242px;
+    height: 242px;
+    background-color:rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding-top: 80px;
+  }
+}
+
+.current-user-box {
+  margin: 0px;
+  width: 300px;
+  float: left;
+
+  .name {
+    margin-top: 50px;
+    font-size: 27px;
+    font-weight: bold;
+    color: #667580;
+    letter-spacing: 3px;
+  }
+
+  .text {
+    color: #667580;
+  }
+
+  .image-text {
+    margin-top: 15px;
+    color: #0084B4;
+    font-size: 17px;
+  }
+
+  .images {
+    .image {
+      width: 88px;
+      height: 88px;
+      float: left;
+      border-radius: 5px;
+      margin: 7px 7px 0 0;
+    }
+  }
+}
+
+.current-user-time-line {
+  float: right;
+  margin-top: 15px;
+}
+
+//edit
+
+.profile-cover-image-mask {
+  height: 400px;
+  background-color:rgba(0,0,0,0.5);
+  padding-top: 200px;
+}
+
+.camera-icno {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+
+  .edit-header-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.edit-field {
+  margin-bottom: 10px;
+  border: 1px solid #BFE0EC;
+  border-radius: 5px;
+}
+
+.edit-box {
+  // z-index: -1;
+  position: relative;
+  left: -13px;
+  background-color: #e5f2f7;
+  width: 320px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.edit-name {
+  height: 30px;
+}
+
+.time-line-mask {
+  background-color: white;
+  opacity: 0.2;
+}
+
+.icon-image-box {
+    position: relative;
+    padding: 0px;
+    // left: -105px;
+    border: 1px solid #BFE0EC;
+  li {
+    width: 400px;
+    text-align: center;
+
+  }
+}
+
+.edit-icon-image-button {
+  color: white;
+}
+
+.edit-icon-image-button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+
+

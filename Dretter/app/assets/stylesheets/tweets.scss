@@ -1,0 +1,230 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(245, 248, 250);
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+header {
+  height: 55px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+
+  .header-container {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .header-logo {
+    font-size: 20px;
+    margin: 13px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    .logo_link {
+      color: rgb(102, 117, 128) ;
+    }
+  }
+
+  .header-setting {
+    float: right;
+    .setting-button {
+      border-style: none;
+      background-color: rgb(245, 248, 250);
+      border: 1px solid #BFE0EC;
+      font-size: 13px;
+      width: 100px;
+      height: 35px;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+}
+
+.container{
+  padding-top: 65px;
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+//index
+
+//Profile box
+.profile-box {
+  width: 320px;
+  margin-right: 15px;
+  float: left;
+  border-radius: 5px;
+
+    .profile-header-image {
+      height: 100px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .profile-bottom {
+      border: 1px solid #e1e8ed;
+      background-color: white;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .prodile-image-large {
+      width: 80px;
+      height: 80px;
+      border-radius: 5px;
+      border: white 3px solid;
+      position: relative;
+      top: -36px;
+      right: -13px;
+      float: left;
+    }
+
+    .profile-name-box {
+      float: left;
+      margin-left: 20px;
+      margin-top: 7px;
+
+      .profile-name {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 3px;
+      }
+
+      .profile-username {
+        color: gray;
+      }
+    }
+
+    .profile-index {
+      clear: both;
+      margin-left: 15px;
+      position: relative;
+      top: -15px;
+
+      li {
+        color: gray;
+        float: left;
+        list-style-type: none;
+        margin-right: 41px;
+        font-size: 10px;
+      }
+    }
+
+    .profile-number {
+      clear: both;
+      height: 30px;
+      margin-left: 15px;
+      position: relative;
+      top: -15px;
+
+      li {
+        color: gray;
+        float: left;
+        font-size: 25px;
+        list-style-type: none;
+        margin-right: 43px;
+        color: rgb(0,131, 182);
+      }
+    }
+}
+
+//form
+.timeline-tweet-box {
+  border: 1px solid #BFE0EC;
+  border-radius: 5px 5px 0 0;
+  width: 588px;
+  float: left;
+
+  .tweet_form {
+    // height: 57px;
+    background-color: rgb(229, 242, 247);
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #e1e8ed;
+    padding: 10px;
+
+    .form-control{
+      border: 1px solid #BFE0EC;
+      margin: 5px 5px;
+    }
+
+    .form-control::-webkit-input-placeholder {
+      color: #ccd6dd;
+    }
+
+    .tweet-submit {
+      width: 111px;
+      height: 40px;
+      padding: 9px;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      background-color: #0084B4;
+      margin-top: 10px;
+      float: right;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
+
+//time line
+.all_tweets {
+  border: 1px solid #e1e8ed;
+}
+
+.tweet-container {
+  border-bottom: 1px solid #e1e8ed;
+  padding: 15px;
+  background-color: white;
+
+  .tweet-wrapper {
+  }
+
+  .icon-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    float: left;
+  }
+
+
+  .tweet-right {
+    float: left;
+    margin-left: 15px;
+    width: 485px;
+
+    .tweet-name {
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .tweet-text {
+      font-size: 15px;
+    }
+
+    .tweet-image {
+      width: 485px;
+      height: 300px;
+      overflow: hidden;
+      float: left;
+      margin-top: 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+  }
+}
+
+

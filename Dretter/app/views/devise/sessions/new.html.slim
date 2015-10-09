@@ -1,0 +1,44 @@
+.login-background
+  .container
+    .login-poem
+      p.welcome
+        span
+          | Dretter
+        |  へようこそ
+      p.welcom-poem
+        | 友達や魅力的な人々とつながって、興味のある最新情報を見つけましょう。そして、いま起きているできごとを様々な角度から見てみましょう。
+
+    .login-large-box
+      .login-box
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .field.email-field
+            = f.email_field :email, autofocus: true, class: "form-control", placeholder: "メールアドレス"
+          .clearfix
+            .field.password-field
+              = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "パスワード"
+            .actions
+              = f.submit "ログイン", class: "login-button"
+          - if devise_mapping.rememberable?
+            .field.checkbox-term
+              = f.check_box :remember_me
+            .checkbox-term
+             | 保存する
+
+      .signin-box
+        .sign-poem
+          | Dretter始めませんか？
+
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+
+          .field.sign-field
+            = f.email_field :email, autofocus: true, class: "form-control", placeholder: "メールアドレス"
+
+          .field.sign-field
+            = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "パスワード"
+
+          .field.sign-field
+            = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "パスワード確認"
+
+          .actions.clearfix
+            = f.submit "Dretterに登録する", class: "login-button signin-button"

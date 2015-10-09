@@ -1,0 +1,30 @@
+.container
+  .profile-box
+    .profile-header-image style="background: url(#{current_user.header_image}) center center no-repeat; background-size: cover;"
+    .profile-bottom
+      .prodile-image-large style="background: url(#{current_user.icon_image}) center center no-repeat; background-size: cover;"
+
+      .profile-name-box
+        .profile-name
+          = current_user.name
+
+      .profile-index
+        li
+          | ツイート
+        li
+          | お気に入り
+      .profile-number
+        li
+          | 100
+        li
+          | 100
+
+  .timeline-tweet-box
+    .tweet_form.clearfix
+      = form_for @tweet, remote: true do |f|
+        = f.text_area :text, class: "form-control", placeholder: "いまどうしてる？"
+        = f.text_field :image_url, class: "form-control", placeholder: "画像のURLを貼ってね"
+        = f.submit "ツイート", class: "tweet-submit"
+
+    .all_tweets
+      = render @tweets
