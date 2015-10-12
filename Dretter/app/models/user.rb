@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
+
   has_many :tweets
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :groups_users
+  has_many :groups, through: :groups_users
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -12,5 +14,9 @@ class User < ActiveRecord::Base
     self.profile = 'プロフィールを設定しましょう'
     self.header_image = 'https://s.yimg.com/uy/build/images/sohp/backgrounds/bottom5.jpg'
     self.icon_image = 'http://up.gc-img.net/post_img/2013/07/vdKuSHGm3JqOSou_sWPIG_16.png'
+  end
+
+  def active_group
+    Group.find(active_group_id)
   end
 end

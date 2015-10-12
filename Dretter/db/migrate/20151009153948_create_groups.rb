@@ -3,6 +3,7 @@ class CreateGroups < ActiveRecord::Migration
     create_table :groups do |t|
       t.string   :name
       t.text     :image_url
+      t.text     :key, :unique => true
       t.integer  :user_id
       t.timestamps null: false
     end

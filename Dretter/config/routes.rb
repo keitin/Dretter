@@ -3,5 +3,13 @@ Rails.application.routes.draw do
   root 'tweets#index'
   resources :tweets
   resources :users
-  resources :groups
+  resources :groups do
+    collection do
+      get 'search'
+    end
+    member do
+      post 'join'
+      post 'change'
+    end
+  end
 end

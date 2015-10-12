@@ -1,0 +1,4 @@
+<% if @searched_group %>
+$(".group-search-field").val("");
+$(".searched-group").html("<%= j(render partial: 'searched_group', locals: { group: @searched_group }) %>")
+<% end %>

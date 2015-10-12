@@ -1,0 +1,8 @@
+= form_tag ("/groups/#{group.id}/join")
+.current-user-group.clearfix
+  .current-user-group-image style="background: url(#{group.image_url}) center center no-repeat; background-size: cover;"
+
+  .current-group-name
+     = group.name
+
+  input.change-active-group type="submit" name="commit" value="Join"

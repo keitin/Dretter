@@ -21,9 +21,11 @@
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
             <li><%= link_to "グループ作成", new_group_path, remote: true %></li>
-            <li><%= link_to "グループ検索", destroy_user_session_path, :method => :delete %></li>
-            <li><%= link_to "グループ一覧", destroy_user_session_path, :method => :delete %></li>
+            <li><%= link_to "グループ一覧", search_groups_path %></li>
           </ul>
+        </div>
+        <div class="active-group-name">
+          <%= current_user.active_group.name %>
         </div>
         <div class="dropdown header-setting">
           <button class="setting-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -40,7 +42,7 @@
   </div>
 
 </header>
-  <div id="group-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+  <div id="new-group-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
   <%= yield %>
 </body>
 </html>

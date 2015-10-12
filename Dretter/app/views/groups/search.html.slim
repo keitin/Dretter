@@ -1,0 +1,43 @@
+.container
+  .profile-box
+    .profile-header-image style="background: url(#{current_user.header_image}) center center no-repeat; background-size: cover;"
+    .profile-bottom
+      .prodile-image-large style="background: url(#{current_user.icon_image}) center center no-repeat; background-size: cover;"
+
+      .profile-name-box
+        .profile-name
+          = current_user.name
+
+      .profile-index
+        li
+          | ツイート
+        li
+          | お気に入り
+      .profile-number
+        li
+          | 100
+        li
+          | 100
+
+  .group-box
+    .groups-heading
+      | Groups
+    .search-group-box.clearfix
+        = form_tag('/groups/search', method: :get, remote: true) do
+
+          input.search__query.form-control.group-search-field name="key" placeholder="グループキーで検索" type="text"
+          input.tweet-submit.group-search-button type="submit" name="commit" value="検索"
+          = link_to "New", new_group_path, class: "tweet-submit group-search-button group-new-link", remote: true
+
+    .current-user-group-heading
+      | 検索結果
+    .current-user-groups-box
+      .searched-group
+          - if @searched_group
+            = render partial: 'searched_group', locals: { group: @searched_group }
+
+    .current-user-groups-box
+      .current-user-group-heading
+        | あなたのグループ
+      = render @groups
+
