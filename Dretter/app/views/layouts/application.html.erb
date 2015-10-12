@@ -12,8 +12,10 @@
 <header>
   <div class="header-container">
     <div class="header-logo">
-      <%= link_to "Dretter", root_path, class: "logo_link" %>
       <% if user_signed_in? %>
+        <% if current_user.active_group_id %>
+          <%= link_to "Dretter", root_path, class: "logo_link" %>
+        <% end %>
         <div class="dropdown header-setting group-menu">
           <button class="setting-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             グループ
@@ -24,9 +26,11 @@
             <li><%= link_to "グループ一覧", search_groups_path %></li>
           </ul>
         </div>
-        <div class="active-group-name">
-          <%= current_user.active_group.name %>
-        </div>
+        <% if current_user.active_group_id %>
+          <div class="active-group-name">
+            <%= current_user.active_group.name %>
+          </div>
+        <% end %>
         <div class="dropdown header-setting">
           <button class="setting-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             設定

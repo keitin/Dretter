@@ -1,4 +1,7 @@
 class GroupsController < ApplicationController
+  def index
+  end
+
   def new
     @group = Group.new
   end
@@ -7,6 +10,7 @@ class GroupsController < ApplicationController
     @group = Group.create(group_params)
     @groups = current_user.groups.order("created_at DESC")
     GroupsUser.create(user_id: current_user.id, group_id: @group.id)
+    current_user.update(active_group_id: @group.id)
   end
 
   def search
