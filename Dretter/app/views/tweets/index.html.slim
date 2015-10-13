@@ -10,7 +10,7 @@
 
       .profile-index
         li
-          | ツイート
+          | ダレート
         li
           | お気に入り
       .profile-number
@@ -24,7 +24,7 @@
       = form_for @tweet, remote: true do |f|
         = f.text_area :text, class: "form-control", placeholder: "いまどうしてる？"
         = f.text_field :image_url, class: "form-control", placeholder: "画像のURLを貼ってね"
-        = f.submit "ツイート", class: "tweet-submit"
+        = f.submit "ダレート", class: "tweet-submit"
 
     .all_tweets
       = render @tweets
