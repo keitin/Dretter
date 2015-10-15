@@ -19,4 +19,10 @@ class User < ActiveRecord::Base
   def active_group
     Group.find(active_group_id)
   end
+
+  def self.fetch_tweets
+    puts "hogehogehogehogeho================"
+    redirect_to root_path
+  end
+
 end
