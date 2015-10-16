@@ -7,18 +7,18 @@ window.addEventListener("load", function() {
   $(function(){
     setInterval( function(){
       // alert("Hello World");
-    $.ajax({
-      url: "/",
-      type: "GET",
-      dataType: "json",
-      success: function(data){
-        console.log("リロードしたよ");
-      },
-      error: function(xhr, status, error){
-        console.log(xhr.status, status, error.toString());
-      }
-    });
-    }, 10000);
+      $.ajax({
+        url: "/",
+        type: "GET",
+        dataType: "script",
+        success: function(data){
+          console.log("リロードしたよ");
+        },
+        error: function(xhr, status, error){
+          console.log(xhr.status, status, error.toString());
+        }
+      });
+    }, 1000);
   });
 
 });
