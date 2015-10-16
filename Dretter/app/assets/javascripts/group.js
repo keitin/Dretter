@@ -18,7 +18,7 @@ window.addEventListener("load", function() {
           console.log(xhr.status, status, error.toString());
         }
       });
-    }, 1000);
+    }, 10000);
   });
 
 });
