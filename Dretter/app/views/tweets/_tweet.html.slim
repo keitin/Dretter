@@ -1,9 +1,9 @@
 .tweet-container.clearfix
   .tweet-wrapper
-    .icon-image style="background: url(#{tweet.user.icon_image}) center center no-repeat; background-size: cover;"
+    .icon-image style="background: url(#{tweet.fake_user.icon_image}) center center no-repeat; background-size: cover;"
     .tweet-right
       .tweet-name
-        = tweet.user.name
+        = tweet.fake_user.name
       .tweet-text
         = tweet.text
         / = tweet.text
